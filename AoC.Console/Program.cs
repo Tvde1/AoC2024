@@ -11,6 +11,13 @@ AnsiConsole.Write(text);
 
 var puzzle = DiscoverPuzzle();
 
+var c = new Calendar(puzzle.Year, 12)
+    .Culture("en-GB")
+    .HighlightStyle(Style.Parse("yellow"))
+    .AddCalendarEvent("Today", puzzle.Year, 12, puzzle.Day)
+    .Centered();
+
+AnsiConsole.Write(c);
 AnsiConsole.MarkupLine($"[bold]Selected:[/] [u]{puzzle.Year}[/] Day [u]{puzzle.Day}[/]");
 
 var runSelection = new SelectionPrompt<string>()
