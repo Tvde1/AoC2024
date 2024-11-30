@@ -1,4 +1,7 @@
 # AoC2024
+
+![screenshot](screenshot.png)
+
 Advent of code runner with support for:
 * Console
 * Benchmarking

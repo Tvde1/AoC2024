@@ -1,31 +1,21 @@
-﻿namespace AoC.Puzzles._2024;
+﻿using AoC.Puzzles;
+
+namespace AoC.Console._2024;
 
 [Puzzle(2024, 2)]
-public class Day02 : IPuzzle<DateTime, Day02.Something>
+public class Day02 : IPuzzle<int, string>
 {
-    public DateTime SolvePart1(ReadOnlySpan<char> input)
+    public int SolvePart1(ReadOnlySpan<char> input)
     {
-        Task.Delay(1000).Wait();
-        return DateTime.Today;
+        return 1234;
     }
 
-    public string PrettyPrint(DateTime output)
+    public string PrettyPrint(int output) => output.ToString();
+
+    public string SolvePart2(ReadOnlySpan<char> input)
     {
-        return output.ToString("O");
+        return "Hello, World!";
     }
 
-    public Something SolvePart2(ReadOnlySpan<char> input)
-    {
-        return new Something();
-    }
-
-    public string PrettyPrint(Something output)
-    {
-        return output.ToString()!;
-    }
-
-
-    public class Something
-    {
-    }
+    public string PrettyPrint(string output) => output;
 }
