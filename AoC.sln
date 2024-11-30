@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoC.Console", "AoC.Console\AoC.Console.csproj", "{6010A46E-AD95-49A3-806B-78F4ED0DAF8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoC.SourceGenerators", "AoC.SourceGenerators\AoC.SourceGenerators.csproj", "{0C00A4EE-2A49-4F4E-A5B7-1A534E9BF40E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{037BB669-D4C2-4296-9D6D-E06ED3657C72}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6010A46E-AD95-49A3-806B-78F4ED0DAF8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6010A46E-AD95-49A3-806B-78F4ED0DAF8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6010A46E-AD95-49A3-806B-78F4ED0DAF8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6010A46E-AD95-49A3-806B-78F4ED0DAF8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C00A4EE-2A49-4F4E-A5B7-1A534E9BF40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C00A4EE-2A49-4F4E-A5B7-1A534E9BF40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C00A4EE-2A49-4F4E-A5B7-1A534E9BF40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C00A4EE-2A49-4F4E-A5B7-1A534E9BF40E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
