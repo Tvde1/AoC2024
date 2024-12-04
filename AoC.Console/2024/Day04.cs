@@ -112,16 +112,14 @@ public class Day04 : IPuzzle<long>
             (-1, 1), (-1, -1)
         ];
 
-        var totalCount = 0;
-
         for (var currRow = 0; currRow < rowCount; currRow++)
         {
             for (var currColumn = 0; currColumn < newlineIndex; currColumn++)
             {
-                totalCount++;
                 var currIndex = GetIndex(currRow, currColumn);
                 Debug.Assert(currIndex is not null);
-                if (input[currIndex.Value] != 'A')
+
+                if (input[currIndex.Value] is not 'A')
                 {
                     continue;
                 }
