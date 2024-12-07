@@ -105,12 +105,12 @@ public class Day04 : IPuzzle<long>
         var rowCount = (input.Length + newlineLength) / (newlineIndex + newlineLength);
 
         var counter = 0;
-
-        Span<(int RowDiff, int ColumnDiff)> diagonals =
+        Span<((int RowDiff, int ColumnDiff), (int RowDiff, int ColumnDiff))> diagonals =
         [
-            ( 1, 1), ( 1, -1),
-            (-1, 1), (-1, -1)
+            (( 1, 1), (-1, -1)),
+            ((-1, 1), ( 1, -1))
         ];
+
 
         for (var currRow = 0; currRow < rowCount; currRow++)
         {
@@ -124,27 +124,26 @@ public class Day04 : IPuzzle<long>
                     continue;
                 }
 
-                var countM = 0;
-                var countS = 0;
+                var bla = 0;
 
-                foreach (var (rowDiff, columnDiff) in diagonals)
+                foreach (var ((firstRowDiff, firstColumnDiff), (secondRowDiff, secondColumnDiff)) in diagonals)
                 {
-                    var idx = GetIndex(currRow + rowDiff, currColumn + columnDiff);
-                    if (idx is null)
+                    var idxOne = GetIndex(currRow + firstRowDiff, currColumn + firstColumnDiff);
+                    var idxTwo = GetIndex(currRow + secondRowDiff, currColumn + secondColumnDiff);
+                    if (idxOne is null || idxTwo is null)
                     {
                         break;
                     }
 
-                    switch (input[idx.Value])
+                    bla += (input[idxOne.Value], input[idxTwo.Value]) switch
                     {
-                        case 'M': countM++;
-                            break;
-                        case 'S': countS++;
-                            break;
-                    }
+                        ('M', 'S') => 1,
+                        ('S', 'M') => 1,
+                        _ => 0,
+                    };
                 }
 
-                if (countM is 2 && countS is 2)
+                if (bla is 2)
                 {
                     counter++;
                 }
